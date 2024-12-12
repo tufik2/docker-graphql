@@ -18,7 +18,7 @@ jobs:
       with:
         major_pattern: "(MAJOR)"
         minor_pattern: "(MINOR)"
-        format: "${major}.${minor}.${increment}"
+        version_format: "${major}.${minor}.${increment}"
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
