@@ -30,5 +30,6 @@ jobs:
         VERSION: ${{steps.version.outputs.version}}
       run: | 
         echo "NEW VERSION: $VERSION"
+        
       # docker build -f Dockerfile -t tufik2/docker-graphql:$VERSION . --push
       # docker build -f Dockerfile -t tufik2/docker-graphql:latest . --push
