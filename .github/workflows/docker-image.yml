@@ -17,8 +17,8 @@ jobs:
       id: version
       with:
         major_pattern: "major:"
-        minor_pattern: "minor:"
-        version_format: "${major}.${minor}.${patch}-prerelease${increment}"
+        minor_pattern: "feature:"
+        version_format: "${major}.${feature}.${patch}.${increment}"
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
