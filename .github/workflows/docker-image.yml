@@ -26,6 +26,7 @@ jobs:
         NEW_VERSION: ${{steps.version.outputs.version}}
       run: | 
         echo "Test $NEW_VERSION"
+        
     # docker login -u $DOCKER_USER -p $DOCKER_PASSWOR 
     # - name: build docker image
     #   run: | 
