@@ -29,5 +29,6 @@ jobs:
       env:
         VERSION: ${{steps.version.outputs.version}}
       run: | 
-        docker build -f Dockerfile -t tufik2/docker-graphql:$VERSION . --push
-        docker build -f Dockerfile -t tufik2/docker-graphql:latest . --push
+        echo "NEW VERSION: $VERSION"
+      # docker build -f Dockerfile -t tufik2/docker-graphql:$VERSION . --push
+      # docker build -f Dockerfile -t tufik2/docker-graphql:latest . --push
