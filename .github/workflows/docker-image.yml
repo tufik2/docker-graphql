@@ -26,4 +26,4 @@ jobs:
     - name: build docker image
       run: | 
         docker build -t tufik2/docker-graphql:0.0.1 . --push
-        && docker build -t tufik2/docker-graphql:latest . --push
+        docker build -t tufik2/docker-graphql:latest . --push
