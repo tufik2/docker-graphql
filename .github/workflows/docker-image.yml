@@ -18,12 +18,12 @@ jobs:
       with:
         major_pattern: "major:"
         minor_pattern: "minor:"
-        version_format: "${major}.${minor}"
+        version_format: "${major}.${minor}.${patch}"
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        NEW_VERSION: ${{steps.version}}
+        NEW_VERSION: ${{steps.version.outputs.version}}
       run: | 
         echo "Test $NEW_VERSION"
     # docker login -u $DOCKER_USER -p $DOCKER_PASSWOR 
